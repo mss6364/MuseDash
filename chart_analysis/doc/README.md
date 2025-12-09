@@ -28,3 +28,5 @@
 占位文件：
 - `chart_analysis.py`：仅保留 main 占位，按上述要求补全解析/统计/绘图/协议输出。
 - `requirements.txt`：后续可加入 matplotlib/plotly 等依赖。
+
+实现完成后更新该部分的详细实现思路doc（建议使用文件夹名.md的markdown文件）和相关的思路/流程图片，将用于最终报告和ppt

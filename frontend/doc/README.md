@@ -18,3 +18,5 @@
 - 普通模式：提供获取曲目列表（排除 charts/Random）、音频预览地址、分析图 URL 的 API。
 - 随机模式：提供“生成 Random 谱面 + 返回分析图”的 API。
 - 写入流程：将选中曲目的 BPM/ROM 写入（chart_engine），并在需要时通过后端打开 `quartus/MuseDash.qsf`。
+
+实现完成后更新该部分的详细实现思路doc（建议使用文件夹名.md的markdown文件）和相关的思路/流程图片，将用于最终报告和ppt

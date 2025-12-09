@@ -1,34 +1,25 @@
 """
-音乐播放协同占位实现。
-处理空格键触发播放，以及缺失音频时的节拍回退。
+音乐播放接口占位。
+主要接口：listen_and_play(chart_path_or_audio_path)
+调用后监听键盘，按下空格立即播放对应音乐（无音乐时可自行决定是否播放节拍）。
+具体逻辑留待实现。
 """
 
 
-def find_audio_for_chart(chart_path):
+def listen_and_play(chart_name):
     """
-    TODO:
-    - 在 assets/ 或谱面同目录下查找同名音频
-    - 支持常见扩展名（wav/mp3 等）
+    TODO: 监听键盘，空格触发播放。
+    - 输入：曲目名或谱面/音频路径
+    - 根据曲目名查找 charts/<曲目名>/<曲目名>.mp3，若不存在则回退播放节拍
     """
-    raise NotImplementedError("音频查找尚未实现。")
-
-
-def play_audio_or_beat(audio_path):
-    """
-    TODO:
-    - 若有音频文件则直接播放
-    - 否则根据谱面 BPM 播放合成节拍/节拍器
-    """
-    raise NotImplementedError("播放逻辑尚未实现。")
+    raise NotImplementedError("音乐播放逻辑尚未实现。")
 
 
 def main():
     """
-    TODO:
-    - 最小 CLI：加载谱面，等待空格触发播放/暂停
-    - 与谱面后端对接获取 BPM 以驱动节拍回退
+    调试入口：可手动调用 listen_and_play 进行本地测试。
     """
-    raise NotImplementedError("音乐协同 CLI 尚未实现。")
+    raise NotImplementedError("调试入口未实现。")
 
 
 if __name__ == "__main__":
