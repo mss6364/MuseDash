@@ -10,6 +10,8 @@ quartus/simulation/
 *.rpt
 *.jdi
 *.csv
+__pycache__/
+*.pyc
 
 # Build artifacts
 *.sof

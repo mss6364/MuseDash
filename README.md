@@ -25,10 +25,11 @@
 
 ## 前端启动方式
 1. 终端切换到项目根目录 `MuseDash`
-2. 启动本地静态服务（Python 内置）：
+2. 推荐使用带接口的本地服务（支持“打开 Quartus”等按钮）：
    ```bash
-   python -m http.server 8000
+   python server.py --port 8000
    ```
+   若仍用 `python -m http.server 8000` 只能浏览静态页面，API 按钮不会生效。
 3. 浏览器打开：
    ```
    http://localhost:8000/frontend/

@@ -258,7 +258,22 @@ async function runChartEngine(chartName) {
 }
 
 function openQuartus() {
-  showToast("打开 Quartus：quartus/MuseDash.qsf");
+  const qsfPath = "quartus/MuseDash.qsf";
+  const qsfUrl = `${BASE_PATH}${qsfPath}`;
+  (async () => {
+    try {
+      const res = await fetch(`${BASE_PATH}quartus/open`, { method: "POST" });
+      const data = await res.json().catch(() => ({}));
+      if (!res.ok || data.success !== true) {
+        throw new Error(data.message || `HTTP ${res.status}`);
+      }
+      showToast("Requested Quartus open (MuseDash.qsf)");
+    } catch (err) {
+      console.warn("openQuartus failed, fallback to direct download", err);
+      showToast("Backend unavailable, downloading MuseDash.qsf for manual open");
+      window.open(qsfUrl, "_blank");
+    }
+  })();
 }
 
 function generateRandomChart() {
